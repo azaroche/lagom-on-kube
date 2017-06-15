@@ -15,19 +15,19 @@
 1. Bootstrap [Heapster][heapster] (including InfluxDB and Grafana) for monitoring, and [configure it][heapster-configs] based on [these configuration files][heapster-orig-configs]
 
     ```shell
-    kubectl create -f ./kube/heapster
+    kubectl create -f ./kube/manuell/heapster
     ```
 
 1. Create namespaces for the **Tools** and **Lagom services**
 
     ```shell
-    kubectl create ./kube/000.namespaces.yaml
+    kubectl create ./kube/manuell/000.namespaces.yaml
     ```
 
 1. Install the [Apache Cassandra][cassandra] database and [configure][cassandra-config] it based on [these configuration files][cassandra-orig-config]
 
     ```shell
-    kubectl create -f ./kube/cassandra/cassandra.yaml
+    kubectl create -f ./kube/manuell/cassandra/cassandra.yaml
     ```
 
 ## Now, the Kubernetes infrastructure is ready for installation of Lagom Kube Service Registry and Lagom Kube services
@@ -35,8 +35,8 @@
 1. Install the **Lagom Kube Service Registry**
 
     ```shell
-    kubectl create -f ./kube/001.lrs.service.yaml
-    kubectl create -f ./kube/002.lrs.deployment.yaml
+    kubectl create -f ./kube/manuell/001.lrs.service.yaml
+    kubectl create -f ./kube/manuell/002.lrs.deployment.yaml
     ```
 
 1. Configure the **Telegram bot token** for your build
@@ -52,10 +52,10 @@
 1. Install the **Lagom services**
 
     ```shell
-    kubectl create -f ./kube/003.telegrambot.service.yaml
-    kubectl create -f ./kube/004.telegrambot.deployment.yaml
-    kubectl create -f ./kube/005.helloworldsvc.service.yaml
-    kubectl create -f ./kube/006.helloworldsvc.deployment.yaml
+    kubectl create -f ./kube/manuell/003.telegrambot.service.yaml
+    kubectl create -f ./kube/manuell/004.telegrambot.deployment.yaml
+    kubectl create -f ./kube/manuell/005.helloworldsvc.service.yaml
+    kubectl create -f ./kube/manuell/006.helloworldsvc.deployment.yaml
     ```
 
 1. Configure the [Wolfram Alpha][wolfram-alpha] **AppID** for your build
@@ -87,7 +87,7 @@
 1. Install the **Wolfram Alpha Kube Service**
 
     ```shell
-    kubectl create -f ./kube/007.wolfram-svc.yaml
+    kubectl create -f ./kube/manuell/007.wolfram-svc.yaml
     ```
 
 1. Configure the **Service Registry routing**
@@ -106,14 +106,14 @@
 
 [dashboard]: https://github.com/kubernetes/dashboard
 [heapster]: https://github.com/kubernetes/heapster
-[heapster-configs]: ../kube/heapster
+[heapster-configs]: ../kube/manuell/heapster
 [heapster-orig-configs]: https://github.com/kubernetes/heapster/tree/master/deploy/kube-config/influxdb
 [cassandra]: http://cassandra.apache.org/
-[cassandra-config]: ../kube/cassandra/cassandra.yaml
+[cassandra-config]: ../kube/manuell/cassandra/cassandra.yaml
 [cassandra-orig-config]: https://github.com/kubernetes/kubernetes/tree/master/examples/storage/cassandra
-[telegrambot-service-config-24]: ../kube/004.telegrambot.deployment.yaml#L24
+[telegrambot-service-config-24]: ../kube/manuell/004.telegrambot.deployment.yaml#L24
 [wolfram-alpha]: https://developer.wolframalpha.com/portal
-[wolfram-service-config-47]: ../kube/007.wolfram-svc.yaml#L47
+[wolfram-service-config-47]: ../kube/manuell/007.wolfram-svc.yaml#L47
 [new-relic]: https://newrelic.com
-[wolfram-service-config-49]: ../kube/007.wolfram-svc.yaml#L49
-[services-register-deployment-config-21]: ../kube/002.lrs.deployment.yaml#L21
+[wolfram-service-config-49]: ../kube/manuell/007.wolfram-svc.yaml#L49
+[services-register-deployment-config-21]: ../kube/manuell/002.lrs.deployment.yaml#L21

@@ -39,8 +39,8 @@ See the [tutorial][tutorial] to learn how to build and deploy an application usi
 [main]: https://alexanderray.github.io/lagom-on-kube-dev/img/main.svg
 [lagom-services]: https://alexanderray.github.io/lagom-on-kube-dev/img/lagom_kube_services.svg
 [kubernetes]: https://alexanderray.github.io/lagom-on-kube-dev/img/kubernetes.svg
-[1]: ./../lagomKubeServiceRegister/Readme.md
-[2]: ./../lagomKubeServices/Readme.md
+[1]: ./../lagomKubeServiceRegister/README.md
+[2]: ./../lagomKubeServices/README.md
 [3]: ./minikube.md
 [4]: ./kops.md
 [5]: ./ansible.md

@@ -56,6 +56,7 @@ This how-to is based on [github.com/kubernetes/kops/blob/master/docs/aws.md][git
 [aws]: https://console.aws.amazon.com
 [cli-tools]: cli-tools.md
 [kubernetes]: kubernetes.md
-[kops-config]: kops-config.md
 [ansible]: ansible.md
-[kops-config-file]: ../kube/kops/config.yaml
+[kops-config-file]: ../kube/manuell/kops/config.yaml
+
+[kops-config]: kops-config.md
