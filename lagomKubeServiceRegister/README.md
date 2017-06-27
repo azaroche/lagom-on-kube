@@ -13,7 +13,7 @@
     - To use lagomServiceLocator *locally*:
 
         ```shell
-        git clone -b '1.3.4' --single-branch https://github.com/lagom/lagom.git`
+        git clone -b '1.3.4' --single-branch https://github.com/lagom/lagom.git
 
         cd lagom
 
